@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Spider Task1</string>
     <string name="b1">Increament</string>
+    <string name="b2">Reset</string>
 </resources>
