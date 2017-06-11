@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SpiderAppdevTask1</string>
+    <string name="et1">Enter the element</string>
+    <string name="et2">Enter pos to remove</string>
+    <string name="b1">Add</string>
+    <string name="b2">Remove</string>
+</resources>
