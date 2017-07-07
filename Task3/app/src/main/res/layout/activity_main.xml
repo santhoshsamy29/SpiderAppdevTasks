@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.application.places.MainActivity">
+
+    <fragment
+        android:id="@+id/place_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <AutoCompleteTextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_et"
+        android:hint="Search a location"
+        android:layout_margin="5dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_button"
+        android:text="@string/search"
+        android:layout_toRightOf="@+id/search_et"
+        android:layout_margin="5dp"
+        android:visibility="gone"/>
+    
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cv"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_below="@+id/place_fragment"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/wProgress"
+                android:indeterminate="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/wName"
+                android:textStyle="bold|italic"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="22sp"
+                android:layout_margin="5dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wMain"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wDesc"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@+id/wName"
+                android:layout_toRightOf="@+id/wMain" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:id="@+id/wImage"
+                android:layout_below="@id/wDesc"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wTemp"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wDesc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wHumidity"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wTemp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wWind_speed"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wHumidity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wWind_deg"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wWind_speed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wPressure"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/wWind_deg" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forecast_text"
+        android:clickable="true"
+        android:textSize="12sp"
+        android:text="@string/Forecast"
+        android:layout_below="@+id/cv"
+        android:textColor="@color/text_color"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

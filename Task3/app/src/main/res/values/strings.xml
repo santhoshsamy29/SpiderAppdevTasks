@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Places</string>
+    <string name="Forecast">Click Here For 5 Days Forecast>></string>
+    <string name="temperature">Temperature</string>
+    <string name="search">Search</string>
+
+</resources>
