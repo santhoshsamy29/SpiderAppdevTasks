@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         imgname = "IMG_" + timeStamp + ".jpg";
         Intent camIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(camIntent.resolveActivity(getPackageManager())!= null){
-            File img_path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"/DeltaTaskTwo");
+            File img_path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"/Spider");
             if(!img_path.exists()){
                 if(img_path.mkdirs()){
                     Log.d("CAE","Failed to create Directory");
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_CAMERA:
-                    File img_path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"/DeltaTaskTwo");
+                    File img_path = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),"/Spider");
                     File image_name = new File(img_path,imgname);
 
                     Bitmap bm = decodebitmap(image_name,700,1000);
